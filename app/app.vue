@@ -1,6 +1,11 @@
 <template>
-  <div>
+  <div class="font-sans text-stone-800">
     <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <TheHeader />
+    <HeroSection />
+    <FeaturedProjects />
+    <PortfolioGallery />
+    <BookingSection />
+    <TheFooter />
   </div>
 </template>
