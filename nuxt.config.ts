@@ -4,7 +4,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss'],
   css: ['~/assets/css/main.css'],
+  nitro: {
+    preset: 'github_pages'
+  },
   app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
       title: 'Анна Морозова — фотограф',
       meta: [
