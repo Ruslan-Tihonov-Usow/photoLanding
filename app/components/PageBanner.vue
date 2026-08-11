@@ -2,9 +2,11 @@
 withDefaults(
   defineProps<{
     title: string
+    subtitle?: string
     image?: string
   }>(),
   {
+    subtitle: undefined,
     image: 'https://picsum.photos/seed/anna-banner/1600/900'
   }
 )
@@ -19,8 +21,13 @@ withDefaults(
     >
     <div class="absolute inset-0 bg-gradient-to-t from-stone-900/70 via-stone-900/20 to-stone-900/50" />
 
-    <h1 class="font-display relative z-10 text-4xl uppercase tracking-[0.2em] text-white sm:text-5xl">
-      {{ title }}
-    </h1>
+    <div class="relative z-10 text-center">
+      <h1 class="font-display text-4xl uppercase tracking-[0.2em] text-white sm:text-5xl">
+        {{ title }}
+      </h1>
+      <p v-if="subtitle" class="mt-4 text-sm uppercase tracking-[0.3em] text-white/80">
+        {{ subtitle }}
+      </p>
+    </div>
   </section>
 </template>

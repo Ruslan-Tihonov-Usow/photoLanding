@@ -3,7 +3,7 @@ const isMenuOpen = ref(false)
 
 const navLinks = [
   { label: 'Портфолио', to: '/#portfolio' },
-  { label: 'Обо мне', to: '/#about' },
+  { label: 'Обо мне', to: '/about' },
   { label: 'Услуги', to: '/#services' },
   { label: 'Цены', to: '/prices' },
   { label: 'Контакты', to: '/#footer' }
