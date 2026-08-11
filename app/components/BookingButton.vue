@@ -2,7 +2,7 @@
 withDefaults(
   defineProps<{
     label?: string
-    variant?: 'solid' | 'outline' | 'light'
+    variant?: 'solid' | 'outline' | 'outline-dark' | 'light'
     size?: 'sm' | 'md'
   }>(),
   {
@@ -17,6 +17,7 @@ const { open } = useBookingModal()
 const variantClasses = {
   solid: 'bg-stone-900 text-white hover:bg-stone-700',
   outline: 'border border-white/70 text-white hover:bg-white hover:text-stone-900',
+  'outline-dark': 'border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white',
   light: 'bg-white text-stone-900 hover:bg-white/90'
 }
 

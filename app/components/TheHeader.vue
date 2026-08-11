@@ -2,28 +2,28 @@
 const isMenuOpen = ref(false)
 
 const navLinks = [
-  { label: 'Портфолио', href: '#portfolio' },
-  { label: 'Обо мне', href: '#about' },
-  { label: 'Услуги', href: '#services' },
-  { label: 'Цены', href: '#pricing' },
-  { label: 'Контакты', href: '#footer' }
+  { label: 'Портфолио', to: '/#portfolio' },
+  { label: 'Обо мне', to: '/#about' },
+  { label: 'Услуги', to: '/#services' },
+  { label: 'Цены', to: '/prices' },
+  { label: 'Контакты', to: '/#footer' }
 ]
 </script>
 
 <template>
   <header class="absolute top-0 left-0 right-0 z-30">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-12">
-      <a href="#" class="font-display text-xl tracking-wide text-white">Анна Морозова</a>
+      <NuxtLink to="/" class="font-display text-xl tracking-wide text-white">Анна Морозова</NuxtLink>
 
       <nav class="hidden items-center gap-8 lg:flex">
-        <a
+        <NuxtLink
           v-for="link in navLinks"
-          :key="link.href"
-          :href="link.href"
+          :key="link.to"
+          :to="link.to"
           class="text-sm uppercase tracking-wider text-white/90 transition hover:text-white"
         >
           {{ link.label }}
-        </a>
+        </NuxtLink>
       </nav>
 
       <BookingButton
@@ -49,15 +49,15 @@ const navLinks = [
       v-if="isMenuOpen"
       class="flex flex-col gap-4 bg-stone-900/95 px-6 py-6 lg:hidden"
     >
-      <a
+      <NuxtLink
         v-for="link in navLinks"
-        :key="link.href"
-        :href="link.href"
+        :key="link.to"
+        :to="link.to"
         class="text-sm uppercase tracking-wider text-white/90"
         @click="isMenuOpen = false"
       >
         {{ link.label }}
-      </a>
+      </NuxtLink>
       <BookingButton
         label="Записаться"
         variant="light"
