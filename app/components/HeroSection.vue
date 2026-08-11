@@ -16,12 +16,7 @@
         Снимаю свадьбы, love story и портреты так, чтобы вам было легко
         быть собой — а после остались фотографии, к которым хочется возвращаться.
       </p>
-      <a
-        href="#contact"
-        class="mt-10 inline-block rounded-full bg-white px-8 py-3 text-sm uppercase tracking-wider text-stone-900 transition hover:bg-white/90"
-      >
-        Забронировать съёмку
-      </a>
+      <BookingButton label="Забронировать съёмку" variant="light" class="mt-10" />
     </div>
 
     <a

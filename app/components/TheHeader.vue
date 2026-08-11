@@ -6,7 +6,7 @@ const navLinks = [
   { label: 'Обо мне', href: '#about' },
   { label: 'Услуги', href: '#services' },
   { label: 'Цены', href: '#pricing' },
-  { label: 'Контакты', href: '#contact' }
+  { label: 'Контакты', href: '#footer' }
 ]
 </script>
 
@@ -26,12 +26,12 @@ const navLinks = [
         </a>
       </nav>
 
-      <a
-        href="#contact"
-        class="hidden rounded-full border border-white/70 px-5 py-2 text-sm uppercase tracking-wider text-white transition hover:bg-white hover:text-stone-900 lg:inline-block"
-      >
-        Записаться
-      </a>
+      <BookingButton
+        label="Записаться"
+        variant="outline"
+        size="sm"
+        class="hidden lg:inline-block"
+      />
 
       <button
         class="text-white lg:hidden"
@@ -58,9 +58,13 @@ const navLinks = [
       >
         {{ link.label }}
       </a>
-      <a href="#contact" class="text-sm uppercase tracking-wider text-white" @click="isMenuOpen = false">
-        Записаться
-      </a>
+      <BookingButton
+        label="Записаться"
+        variant="light"
+        size="sm"
+        class="w-fit"
+        @click="isMenuOpen = false"
+      />
     </div>
   </header>
 </template>

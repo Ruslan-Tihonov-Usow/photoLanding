@@ -9,7 +9,7 @@ const socialLinks = [
 </script>
 
 <template>
-  <footer class="border-t border-stone-200 bg-stone-50">
+  <footer id="footer" class="border-t border-stone-200 bg-stone-50">
     <div class="mx-auto flex max-w-7xl flex-col items-center gap-4 px-6 py-10 text-center lg:px-12">
       <p class="font-display text-lg text-stone-900">Анна Морозова</p>
 

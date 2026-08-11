@@ -5,7 +5,7 @@
     <HeroSection />
     <FeaturedProjects />
     <PortfolioGallery />
-    <BookingSection />
     <TheFooter />
+    <BookingModal />
   </div>
 </template>
