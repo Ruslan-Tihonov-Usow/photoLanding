@@ -8,7 +8,7 @@ const categories = [
 </script>
 
 <template>
-  <section id="portfolio" class="bg-stone-50 py-20 lg:py-28">
+  <section class="bg-stone-50 py-20 lg:py-28">
     <div class="mx-auto max-w-7xl px-6 lg:px-12">
       <div class="mb-12 text-center">
         <p class="text-sm uppercase tracking-[0.3em] text-stone-400">Портфолио</p>

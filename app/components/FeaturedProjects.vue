@@ -21,10 +21,10 @@ const projects = [
     </div>
 
     <div class="grid gap-8 sm:grid-cols-2">
-      <a
+      <NuxtLink
         v-for="project in projects"
         :key="project.title"
-        href="#portfolio"
+        to="/portfolio"
         class="group relative block overflow-hidden"
       >
         <img
@@ -40,7 +40,7 @@ const projects = [
             Смотреть фото →
           </span>
         </div>
-      </a>
+      </NuxtLink>
     </div>
   </section>
 </template>
