@@ -5,7 +5,7 @@ const navLinks = [
   { label: 'Портфолио', to: '/portfolio' },
   { label: 'Обо мне', to: '/about' },
   { label: 'Цены', to: '/prices' },
-  { label: 'Контакты', to: '/#footer' }
+  { label: 'Контакты', to: '/contacts' }
 ]
 </script>
 
