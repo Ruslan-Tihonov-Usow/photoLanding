@@ -1,44 +1,3 @@
-<script setup lang="ts">
-const { isOpen, close } = useBookingModal()
-
-const form = reactive({
-  name: '',
-  email: '',
-  phone: '',
-  shootType: 'wedding',
-  eventDate: '',
-  message: ''
-})
-
-const isSubmitted = ref(false)
-
-function handleSubmit() {
-  // TODO: подключить отправку формы (email-сервис или backend-эндпоинт)
-  isSubmitted.value = true
-}
-
-function handleClose() {
-  close()
-  isSubmitted.value = false
-}
-
-function onKeydown(event: KeyboardEvent) {
-  if (event.key === 'Escape' && isOpen.value) handleClose()
-}
-
-watch(isOpen, (open) => {
-  if (import.meta.client) {
-    document.body.style.overflow = open ? 'hidden' : ''
-  }
-})
-
-onMounted(() => window.addEventListener('keydown', onKeydown))
-onBeforeUnmount(() => {
-  window.removeEventListener('keydown', onKeydown)
-  document.body.style.overflow = ''
-})
-</script>
-
 <template>
   <Teleport to="body">
     <Transition name="booking-modal">
@@ -152,7 +111,48 @@ onBeforeUnmount(() => {
   </Teleport>
 </template>
 
-<style scoped>
+<script setup lang="ts">
+const { isOpen, close } = useBookingModal()
+
+const form = reactive({
+  name: '',
+  email: '',
+  phone: '',
+  shootType: 'wedding',
+  eventDate: '',
+  message: ''
+})
+
+const isSubmitted = ref(false)
+
+function handleSubmit() {
+  // TODO: подключить отправку формы (email-сервис или backend-эндпоинт)
+  isSubmitted.value = true
+}
+
+function handleClose() {
+  close()
+  isSubmitted.value = false
+}
+
+function onKeydown(event: KeyboardEvent) {
+  if (event.key === 'Escape' && isOpen.value) handleClose()
+}
+
+watch(isOpen, (open) => {
+  if (import.meta.client) {
+    document.body.style.overflow = open ? 'hidden' : ''
+  }
+})
+
+onMounted(() => window.addEventListener('keydown', onKeydown))
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', onKeydown)
+  document.body.style.overflow = ''
+})
+</script>
+
+<style scoped lang="scss">
 .booking-modal-enter-active,
 .booking-modal-leave-active {
   transition: opacity 0.2s ease;

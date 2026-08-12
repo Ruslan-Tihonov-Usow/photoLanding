@@ -1,18 +1,3 @@
-<script setup lang="ts">
-const projects = [
-  {
-    title: 'Мария & Иван',
-    subtitle: 'Свадьба на берегу озера',
-    image: 'https://picsum.photos/seed/maria-ivan/1000/1200'
-  },
-  {
-    title: 'Есения & Игорь',
-    subtitle: 'Love story в городе',
-    image: 'https://picsum.photos/seed/esenia-igor/1000/1200'
-  }
-]
-</script>
-
 <template>
   <section class="mx-auto max-w-7xl px-6 py-20 lg:px-12 lg:py-28">
     <div class="mb-12 text-center">
@@ -44,3 +29,18 @@ const projects = [
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+const projects = [
+  {
+    title: 'Мария & Иван',
+    subtitle: 'Свадьба на берегу озера',
+    image: 'https://picsum.photos/seed/maria-ivan/1000/1200'
+  },
+  {
+    title: 'Есения & Игорь',
+    subtitle: 'Love story в городе',
+    image: 'https://picsum.photos/seed/esenia-igor/1000/1200'
+  }
+]
+</script>

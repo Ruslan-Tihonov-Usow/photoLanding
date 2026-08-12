@@ -1,14 +1,3 @@
-<script setup lang="ts">
-const isMenuOpen = ref(false)
-
-const navLinks = [
-  { label: 'Портфолио', to: '/portfolio' },
-  { label: 'Обо мне', to: '/about' },
-  { label: 'Цены', to: '/prices' },
-  { label: 'Контакты', to: '/contacts' }
-]
-</script>
-
 <template>
   <header class="absolute top-0 left-0 right-0 z-30">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-12">
@@ -67,3 +56,14 @@ const navLinks = [
     </div>
   </header>
 </template>
+
+<script setup lang="ts">
+const isMenuOpen = ref(false)
+
+const navLinks = [
+  { label: 'Портфолио', to: '/portfolio' },
+  { label: 'Обо мне', to: '/about' },
+  { label: 'Цены', to: '/prices' },
+  { label: 'Контакты', to: '/contacts' }
+]
+</script>

@@ -1,12 +1,3 @@
-<script setup lang="ts">
-const categories = [
-  { title: 'Свадьбы', image: 'https://picsum.photos/seed/weddings/800/1000' },
-  { title: 'Love Story', image: 'https://picsum.photos/seed/lovestory/800/1000' },
-  { title: 'Портреты', image: 'https://picsum.photos/seed/portraits/800/1000' },
-  { title: 'Семейные', image: 'https://picsum.photos/seed/family/800/1000' }
-]
-</script>
-
 <template>
   <section class="bg-stone-50 py-20 lg:py-28">
     <div class="mx-auto max-w-7xl px-6 lg:px-12">
@@ -36,3 +27,12 @@ const categories = [
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+const categories = [
+  { title: 'Свадьбы', image: 'https://picsum.photos/seed/weddings/800/1000' },
+  { title: 'Love Story', image: 'https://picsum.photos/seed/lovestory/800/1000' },
+  { title: 'Портреты', image: 'https://picsum.photos/seed/portraits/800/1000' },
+  { title: 'Семейные', image: 'https://picsum.photos/seed/family/800/1000' }
+]
+</script>

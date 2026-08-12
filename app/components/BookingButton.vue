@@ -1,3 +1,17 @@
+<template>
+  <button
+    type="button"
+    :class="[
+      'inline-block rounded-full uppercase tracking-wider transition',
+      variantClasses[variant],
+      sizeClasses[size]
+    ]"
+    @click="open"
+  >
+    {{ label }}
+  </button>
+</template>
+
 <script setup lang="ts">
 withDefaults(
   defineProps<{
@@ -26,17 +40,3 @@ const sizeClasses = {
   md: 'px-8 py-3 text-sm'
 }
 </script>
-
-<template>
-  <button
-    type="button"
-    :class="[
-      'inline-block rounded-full uppercase tracking-wider transition',
-      variantClasses[variant],
-      sizeClasses[size]
-    ]"
-    @click="open"
-  >
-    {{ label }}
-  </button>
-</template>

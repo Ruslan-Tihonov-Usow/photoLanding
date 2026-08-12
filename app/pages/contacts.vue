@@ -1,27 +1,3 @@
-<script setup lang="ts">
-const form = reactive({
-  name: '',
-  email: '',
-  phone: '',
-  shootType: 'wedding',
-  eventDate: '',
-  message: ''
-})
-
-const isSubmitted = ref(false)
-
-function handleSubmit() {
-  // TODO: подключить отправку формы (email-сервис или backend-эндпоинт)
-  isSubmitted.value = true
-}
-
-const socialLinks = [
-  { label: 'Instagram', href: '#' },
-  { label: 'Telegram', href: '#' },
-  { label: 'Pinterest', href: '#' }
-]
-</script>
-
 <template>
   <div>
     <PageBanner title="Контакты" />
@@ -138,3 +114,27 @@ const socialLinks = [
     </section>
   </div>
 </template>
+
+<script setup lang="ts">
+const form = reactive({
+  name: '',
+  email: '',
+  phone: '',
+  shootType: 'wedding',
+  eventDate: '',
+  message: ''
+})
+
+const isSubmitted = ref(false)
+
+function handleSubmit() {
+  // TODO: подключить отправку формы (email-сервис или backend-эндпоинт)
+  isSubmitted.value = true
+}
+
+const socialLinks = [
+  { label: 'Instagram', href: '#' },
+  { label: 'Telegram', href: '#' },
+  { label: 'Pinterest', href: '#' }
+]
+</script>

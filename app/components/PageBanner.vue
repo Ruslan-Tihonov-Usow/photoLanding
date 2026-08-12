@@ -1,17 +1,3 @@
-<script setup lang="ts">
-withDefaults(
-  defineProps<{
-    title: string
-    subtitle?: string
-    image?: string
-  }>(),
-  {
-    subtitle: undefined,
-    image: 'https://picsum.photos/seed/anna-banner/1600/900'
-  }
-)
-</script>
-
 <template>
   <section class="relative flex h-[45vh] min-h-[360px] items-center justify-center overflow-hidden bg-stone-900">
     <img
@@ -31,3 +17,17 @@ withDefaults(
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+withDefaults(
+  defineProps<{
+    title: string
+    subtitle?: string
+    image?: string
+  }>(),
+  {
+    subtitle: undefined,
+    image: 'https://picsum.photos/seed/anna-banner/1600/900'
+  }
+)
+</script>

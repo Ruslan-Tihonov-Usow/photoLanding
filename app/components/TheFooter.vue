@@ -1,13 +1,3 @@
-<script setup lang="ts">
-const year = new Date().getFullYear()
-
-const socialLinks = [
-  { label: 'Instagram', href: '#' },
-  { label: 'Telegram', href: '#' },
-  { label: 'Pinterest', href: '#' }
-]
-</script>
-
 <template>
   <footer id="footer" class="border-t border-stone-200 bg-stone-50">
     <div class="mx-auto flex max-w-7xl flex-col items-center gap-4 px-6 py-10 text-center lg:px-12">
@@ -28,3 +18,13 @@ const socialLinks = [
     </div>
   </footer>
 </template>
+
+<script setup lang="ts">
+const year = new Date().getFullYear()
+
+const socialLinks = [
+  { label: 'Instagram', href: '#' },
+  { label: 'Telegram', href: '#' },
+  { label: 'Pinterest', href: '#' }
+]
+</script>
