@@ -19,14 +19,21 @@
       <BookingButton label="Забронировать съёмку" variant="light" class="mt-10" />
     </div>
 
-    <NuxtLink
-      to="/portfolio"
+    <button
+      type="button"
       class="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-white/80 transition hover:text-white"
-      aria-label="Смотреть портфолио"
+      aria-label="Прокрутить вниз"
+      @click="scrollDown"
     >
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
       </svg>
-    </NuxtLink>
+    </button>
   </section>
 </template>
+
+<script setup lang="ts">
+function scrollDown() {
+  window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })
+}
+</script>

@@ -7,7 +7,7 @@
         <div
           v-for="tier in tiers"
           :key="tier.name"
-          class="flex flex-col rounded-lg border p-8"
+          class="flex flex-col rounded-lg border p-8 transition-transform duration-300 ease-out will-change-transform hover:scale-[1.03]"
           :class="tier.highlighted ? 'border-stone-900 shadow-lg' : 'border-stone-200'"
         >
           <p v-if="tier.highlighted" class="mb-4 w-fit rounded-full bg-stone-900 px-3 py-1 text-xs uppercase tracking-wider text-white">
